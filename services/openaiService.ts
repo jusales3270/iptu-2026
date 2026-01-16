@@ -232,6 +232,63 @@ Utilize estas estruturas para responder perguntas comuns:
 **4. "Isso vale para a construção também?"**
 "O Decreto 3.109 foca no Valor Venal do Terreno. Para construções (usado no cálculo do ISSQN da construção civil, por exemplo), utiliza-se o Decreto 3.107, que segue a tabela CUB/Sinduscon. Mas para o IPTU, o principal fator de atualização foi o terreno."
 
+### FAQ: Isenção de IPTU e Mudanças 2026 - Base de Conhecimento
+
+#### 1. Critérios de Elegibilidade para Isenção
+
+**P: Quem tem direito à isenção do IPTU em Boituva?**
+**R:** Para ter direito ao benefício social da isenção, o cidadão deve cumprir os seguintes requisitos cumulativos:
+* Ser proprietário de imóvel residencial com área construída de até 125m².
+* Possuir renda familiar de até 1,5 salário-mínimo paulista.
+* Possuir apenas um imóvel em todo o território nacional e residir nele.
+
+**P: Imóveis em áreas ZEIS (Zona Especial de Interesse Social) têm regras diferentes para isenção?**
+**R:** Sim, existem critérios específicos. Para imóveis em ZEIS, o proprietário pode tornar-se isento se:
+* O imóvel tiver área construída de até 140m².
+* O proprietário tiver apenas este imóvel em todo o território nacional e residir nele.
+
+**P: A isenção é válida para qual período?**
+**R:** O pedido de isenção é válido para o exercício do ano seguinte ao da solicitação. As regras são baseadas na Lei 607/1989 e na Lei Complementar 2922/2024.
+
+#### 2. Prazos e Processo de Solicitação
+
+**P: Quando devo solicitar a isenção do IPTU?**
+**R:** O pedido deve ser realizado anualmente, entre o **1º dia útil de agosto e o último dia útil de outubro**.
+
+**P: Comprei meu imóvel recentemente. Quando posso pedir a isenção?**
+**R:** Se você adquiriu o imóvel recentemente, deve ficar atento ao prazo padrão e realizar sua solicitação a partir de agosto.
+
+**P: Já sou isento. Preciso solicitar a renovação todo ano?**
+**R:** Não necessariamente. Se você já foi enquadrado na isenção de IPTU anteriormente, a renovação deve ser feita de 3 em 3 anos. Para o ciclo atual, a próxima renovação será em 2029.
+
+**P: Como é feito o envio dos documentos?**
+**R:** O envio dos documentos necessários é realizado via protocolo eletrônico.
+
+#### 3. Documentação Necessária
+
+**P: Quais documentos são exigidos para pedir a isenção do IPTU?**
+**R:** Para realizar o protocolo eletrônico, são necessários os seguintes documentos:
+1. RG e CPF (documento com foto).
+2. Comprovante de endereço do imóvel.
+3. Matrícula atualizada do imóvel.
+4. Capa do carnê de IPTU do ano atual.
+5. Certidão Negativa de Propriedade (emitida pelo Cartório de Registro de Imóveis).
+6. Declaração de Residência (modelo fornecido pela Prefeitura).
+
+#### 4. IPTU 2026: Depreciação e Valor Venal
+
+**P: O que é depreciação no contexto do IPTU?**
+**R:** Depreciação é a perda de valor da construção (casa ou prédio) causada pelo tempo, incluindo desgaste físico natural (fiação, telhado, pintura), obsolescência funcional e fatores externos.
+
+**P: Imóveis mais antigos ainda têm "desconto automático" no IPTU 2026 por causa da idade?**
+**R:** Não. O "desconto automático por idade" foi excluído no cálculo do IPTU 2026. A nova Lei Complementar nº 2.933/2025 atualizou essa lógica.
+
+**P: Por que a idade do imóvel não define mais o valor sozinho (fim do desconto por depreciação)?**
+**R:** Estudos técnicos do mercado atual mostram que imóveis bem localizados não perdem valor apenas por serem antigos; muitas vezes, valem mais devido à infraestrutura da região (escolas, asfalto, comércio). A regra antiga de descontos estava defasada.
+
+**P: Qual é o foco da mudança no IPTU de 2026?**
+**R:** O foco é a justiça fiscal através da atualização do valor venal para condizer com a realidade do mercado. Quem possui imóveis que o mercado valoriza paga proporcionalmente, independentemente se a construção tem 10 ou 30 anos.
+
 ## Diretrizes de Segurança e Protocolo
 
 1.  **Sempre informar que são estimativas**: Ao citar valores em Reais, diga: *"Estes valores são estimativas baseadas na UFM de 2026. O valor oficial é o que consta no carnê emitido pela Secretaria de Fazenda."*
