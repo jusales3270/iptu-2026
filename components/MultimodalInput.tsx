@@ -79,7 +79,7 @@ const buttonVariants = cva(
 // Button component
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 
@@ -154,23 +154,23 @@ const PaperclipIcon = ({ size = 16 }: { size?: number }) => {
 
 // Arrow Up Icon SVG (Send) (uses currentColor)
 const ArrowUpIcon = ({ size = 16 }: { size?: number }) => {
-    return (
-      <svg
-        height={size}
-        strokeLinejoin="round"
-        viewBox="0 0 16 16"
-        width={size}
-        style={{ color: 'currentcolor' }}
-      >
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M8.70711 1.39644C8.31659 1.00592 7.68342 1.00592 7.2929 1.39644L2.21968 6.46966L1.68935 6.99999L2.75001 8.06065L3.28034 7.53032L7.25001 3.56065V14.25V15H8.75001V14.25V3.56065L12.7197 7.53032L13.25 8.06065L14.3107 6.99999L13.7803 6.46966L8.70711 1.39644Z"
-          fill="currentColor"
-        />
-      </svg>
-    );
-  };
+  return (
+    <svg
+      height={size}
+      strokeLinejoin="round"
+      viewBox="0 0 16 16"
+      width={size}
+      style={{ color: 'currentcolor' }}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M8.70711 1.39644C8.31659 1.00592 7.68342 1.00592 7.2929 1.39644L2.21968 6.46966L1.68935 6.99999L2.75001 8.06065L3.28034 7.53032L7.25001 3.56065V14.25V15H8.75001V14.25V3.56065L12.7197 7.53032L13.25 8.06065L14.3107 6.99999L13.7803 6.46966L8.70711 1.39644Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
 
 // Sub-Components
 
@@ -212,28 +212,28 @@ function PureSuggestedActions({
       className="grid pb-2 sm:grid-cols-2 gap-2 w-full"
     >
       <AnimatePresence>
-      {suggestedActions.map((suggestedAction, index) => (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ delay: 0.05 * index }}
-          key={`suggested-action-${index}`}
-          className={index > 1 ? 'hidden sm:block' : 'block'}
-        >
-          <Button
-            variant="ghost"
-            onClick={() => onSelectAction(suggestedAction.action)}
-            className="text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start
-                       border-gray-300 bg-white hover:bg-gray-100 text-black hover:text-gray-900"
+        {suggestedActions.map((suggestedAction, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ delay: 0.05 * index }}
+            key={`suggested-action-${index}`}
+            className={index > 1 ? 'hidden sm:block' : 'block'}
           >
-            <span className="font-medium">{suggestedAction.title}</span>
-            <span className="text-gray-500">
-              {suggestedAction.label}
-            </span>
-          </Button>
-        </motion.div>
-      ))}
+            <Button
+              variant="ghost"
+              onClick={() => onSelectAction(suggestedAction.action)}
+              className="text-left border rounded-xl px-4 py-3.5 text-sm flex-1 gap-1 sm:flex-col w-full h-auto justify-start items-start
+                       border-gray-300 bg-white hover:bg-gray-100 text-black hover:text-gray-900"
+            >
+              <span className="font-medium">{suggestedAction.title}</span>
+              <span className="text-gray-500">
+                {suggestedAction.label}
+              </span>
+            </Button>
+          </motion.div>
+        ))}
       </AnimatePresence>
     </div>
   );
@@ -257,40 +257,40 @@ const PreviewAttachment: React.FC<{
   attachment,
   isUploading = false,
 }) => {
-  const { name, url, contentType } = attachment;
+    const { name, url, contentType } = attachment;
 
-  return (
-    <div data-testid="input-attachment-preview" className="flex flex-col gap-1">
-      <div className="w-20 h-16 aspect-video bg-gray-200 rounded-md relative flex flex-col items-center justify-center overflow-hidden border border-gray-300">
-        {contentType?.startsWith('image/') && url ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            key={url}
-            src={url}
-            alt={name ?? 'An image attachment'}
-            className="rounded-md size-full object-cover grayscale"
-          />
-        ) : (
-          <div className="flex items-center justify-center text-xs text-gray-600 text-center p-1">
-             Arquivo: {name?.split('.').pop()?.toUpperCase() || 'Desconhecido'}
-          </div>
-        )}
+    return (
+      <div data-testid="input-attachment-preview" className="flex flex-col gap-1">
+        <div className="w-20 h-16 aspect-video bg-gray-200 rounded-md relative flex flex-col items-center justify-center overflow-hidden border border-gray-300">
+          {contentType?.startsWith('image/') && url ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={url}
+              src={url}
+              alt={name ?? 'An image attachment'}
+              className="rounded-md size-full object-cover grayscale"
+            />
+          ) : (
+            <div className="flex items-center justify-center text-xs text-gray-600 text-center p-1">
+              Arquivo: {name?.split('.').pop()?.toUpperCase() || 'Desconhecido'}
+            </div>
+          )}
 
-        {isUploading && (
-          <div
-            data-testid="input-attachment-loader"
-            className="animate-spin absolute text-gray-500"
-          >
-            <LoaderIcon className="size-5" />
-          </div>
-        )}
+          {isUploading && (
+            <div
+              data-testid="input-attachment-loader"
+              className="animate-spin absolute text-gray-500"
+            >
+              <LoaderIcon className="size-5" />
+            </div>
+          )}
+        </div>
+        <div className="text-xs text-gray-600 max-w-20 truncate">
+          {name}
+        </div>
       </div>
-      <div className="text-xs text-gray-600 max-w-20 truncate">
-        {name}
-      </div>
-    </div>
-  );
-};
+    );
+  };
 
 function PureAttachmentsButton({
   fileInputRef,
@@ -393,8 +393,6 @@ const SendButton = memo(PureSendButton, (prevProps, nextProps) => {
 interface MultimodalInputProps {
   chatId: string;
   messages: Array<UIMessage>;
-  attachments: Array<Attachment>;
-  setAttachments: Dispatch<SetStateAction<Array<Attachment>>>;
   onSendMessage: (params: { input: string; attachments: Attachment[] }) => void;
   onStopGenerating: () => void;
   isGenerating: boolean;
@@ -406,8 +404,6 @@ interface MultimodalInputProps {
 function PureMultimodalInput({
   chatId,
   messages,
-  attachments,
-  setAttachments,
   onSendMessage,
   onStopGenerating,
   isGenerating,
@@ -416,10 +412,8 @@ function PureMultimodalInput({
   selectedVisibilityType,
 }: MultimodalInputProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [input, setInput] = useState('');
-  const [uploadQueue, setUploadQueue] = useState<Array<string>>([]);
 
   const adjustHeight = () => {
     const textarea = textareaRef.current;
@@ -430,12 +424,12 @@ function PureMultimodalInput({
   };
 
   const resetHeight = useCallback(() => {
-     const textarea = textareaRef.current;
-      if (textarea) {
-          textarea.style.height = 'auto';
-          textarea.rows = 1;
-          adjustHeight();
-      }
+    const textarea = textareaRef.current;
+    if (textarea) {
+      textarea.style.height = 'auto';
+      textarea.rows = 1;
+      adjustHeight();
+    }
   }, []);
 
   useEffect(() => {
@@ -448,195 +442,54 @@ function PureMultimodalInput({
     setInput(event.target.value);
   };
 
-  // Placeholder File Upload Function
-  const uploadFile = async (file: File): Promise<Attachment | undefined> => {
-    console.log(`MOCK: Simulating upload for file: ${file.name}`);
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        try {
-          // Use URL.createObjectURL for client-side preview. Remember to revoke!
-          const mockUrl = URL.createObjectURL(file);
-          const mockAttachment: Attachment = {
-            url: mockUrl,
-            name: file.name,
-            contentType: file.type || 'application/octet-stream',
-            size: file.size,
-          };
-          console.log(`MOCK: Upload successful for ${file.name}`);
-          resolve(mockAttachment);
-        } catch (error) {
-          console.error('MOCK: Failed to create object URL for preview:', error);
-          resolve(undefined);
-        } finally {
-           // Remove file name from upload queue
-           setUploadQueue(currentQueue => currentQueue.filter(name => name !== file.name));
-        }
-      }, 700); // Simulate delay
-    });
-  };
-
-  const handleFileChange = useCallback(
-    async (event: ChangeEvent<HTMLInputElement>) => {
-      const files = Array.from(event.target.files || []) as File[];
-      if (files.length === 0) return;
-
-      // Add files to upload queue immediately by name
-      setUploadQueue(currentQueue => [...currentQueue, ...files.map((file) => file.name)]);
-
-      // Clear the file input value to allow selecting the same file again
-      if (fileInputRef.current) {
-        fileInputRef.current.value = '';
-      }
-
-      const MAX_FILE_SIZE = 25 * 1024 * 1024; // 25 MB
-      const validFiles = files.filter(file => file.size <= MAX_FILE_SIZE);
-      const invalidFiles = files.filter(file => file.size > MAX_FILE_SIZE);
-
-      if (invalidFiles.length > 0) {
-         console.warn(`Skipped ${invalidFiles.length} files larger than ${MAX_FILE_SIZE / 1024 / 1024}MB.`);
-         // Also remove invalid files from the upload queue
-         setUploadQueue(currentQueue => currentQueue.filter(name => !invalidFiles.some(f => f.name === name)));
-      }
-
-      // Start uploads for valid files
-      const uploadPromises = validFiles.map((file) => uploadFile(file));
-      const uploadedAttachments = await Promise.all(uploadPromises);
-
-      const successfullyUploadedAttachments = uploadedAttachments.filter(
-        (attachment): attachment is Attachment => attachment !== undefined,
-      );
-
-      // Add successfully uploaded attachments to the main attachments list
-      setAttachments((currentAttachments) => [
-        ...currentAttachments,
-        ...successfullyUploadedAttachments,
-      ]);
-
-    },
-    [setAttachments, uploadFile],
-  );
-
-  const handleRemoveAttachment = useCallback(
-    (attachmentToRemove: Attachment) => {
-      // Revoke the object URL
-      if (attachmentToRemove.url.startsWith('blob:')) {
-         URL.revokeObjectURL(attachmentToRemove.url);
-      }
-      // Filter out the attachment
-      setAttachments((currentAttachments) =>
-        currentAttachments.filter(
-          (attachment) => attachment.url !== attachmentToRemove.url || attachment.name !== attachmentToRemove.name
-        )
-      );
-      // Focus the textarea
-      textareaRef.current?.focus();
-    },
-    [setAttachments, textareaRef]
-  );
-
   const submitForm = useCallback(() => {
-     if (input.trim().length === 0 && attachments.length === 0) {
-        console.warn('Please enter a message or add an attachment.');
-        return;
-     }
+    if (input.trim().length === 0) {
+      console.warn('Please enter a message.');
+      return;
+    }
 
-    onSendMessage({ input, attachments });
+    onSendMessage({ input, attachments: [] });
 
-    // Clear input and attachments
+    // Clear input
     setInput('');
-    setAttachments([]);
-
-    // Revoke object URLs for sent attachments
-    attachments.forEach(att => {
-        if (att.url.startsWith('blob:')) {
-            URL.revokeObjectURL(att.url);
-        }
-    });
-
     resetHeight();
     textareaRef.current?.focus();
 
   }, [
     input,
-    attachments,
     onSendMessage,
-    setAttachments,
     textareaRef,
     resetHeight,
   ]);
 
-  const showSuggestedActions = messages.length === 0 && attachments.length === 0 && uploadQueue.length === 0;
-
-  const isAttachmentDisabled = isGenerating || uploadQueue.length > 0;
+  const showSuggestedActions = messages.length === 0;
 
   return (
     <div className={cn("relative w-full flex flex-col gap-4", className)}>
 
       <AnimatePresence>
-       {showSuggestedActions && (
-         <motion.div
+        {showSuggestedActions && (
+          <motion.div
             key="suggested-actions-container"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.2 }}
-         >
+          >
             <SuggestedActions
               onSelectAction={(action) => {
                 setInput(action);
                 requestAnimationFrame(() => {
-                     adjustHeight();
-                     textareaRef.current?.focus();
+                  adjustHeight();
+                  textareaRef.current?.focus();
                 });
-             }}
+              }}
               chatId={chatId}
               selectedVisibilityType={selectedVisibilityType}
             />
-         </motion.div>
-       )}
+          </motion.div>
+        )}
       </AnimatePresence>
-
-
-      {/* Hidden file input */}
-      <input
-        type="file"
-        className="fixed -top-4 -left-4 size-0.5 opacity-0 pointer-events-none"
-        ref={fileInputRef}
-        multiple
-        onChange={handleFileChange}
-        tabIndex={-1}
-        disabled={isAttachmentDisabled}
-        accept="image/*,video/*,audio/*,.pdf" // Example mime types
-      />
-
-      {(attachments.length > 0 || uploadQueue.length > 0) && (
-        <div
-          data-testid="attachments-preview"
-          className="flex pt-[10px] flex-row gap-3 overflow-x-auto items-end pb-2 pl-1"
-        >
-          {attachments.map((attachment) => (
-            <div key={attachment.url || attachment.name} className="relative group">
-                <PreviewAttachment attachment={attachment} isUploading={false} />
-                <Button
-                  variant="destructive"
-                  size="icon"
-                  className="absolute top-[-8px] right-[-8px] h-5 w-5 rounded-full p-0 flex items-center justify-center z-20 opacity-0 group-hover:opacity-100 transition-opacity"
-                  onClick={() => handleRemoveAttachment(attachment)}
-                  aria-label={`Remover ${attachment.name}`}
-                >
-                   <XIcon className="size-3" />
-                </Button>
-            </div>
-          ))}
-          {uploadQueue.map((filename, index) => (
-            <PreviewAttachment
-              key={`upload-${filename}-${index}`}
-              attachment={{ url: '', name: filename, contentType: '', size: 0 }}
-              isUploading={true}
-            />
-          ))}
-        </div>
-      )}
 
       <Textarea
         data-testid="multimodal-input"
@@ -646,13 +499,13 @@ function PureMultimodalInput({
         onChange={handleInput}
         className={cn(
           'min-h-[24px] max-h-[calc(75dvh)] overflow-y-auto resize-none rounded-2xl !text-base pb-10',
-          'bg-gray-100 border border-gray-300', 
+          'bg-gray-100 border border-gray-300',
           className,
         )}
-        style={{color: 'black'}}
+        style={{ color: 'black' }}
         rows={1}
         autoFocus
-        disabled={!canSend || isGenerating || uploadQueue.length > 0}
+        disabled={!canSend || isGenerating}
         onKeyDown={(event) => {
           if (
             event.key === 'Enter' &&
@@ -661,7 +514,7 @@ function PureMultimodalInput({
           ) {
             event.preventDefault();
 
-            const canSubmit = canSend && !isGenerating && uploadQueue.length === 0 && (input.trim().length > 0 || attachments.length > 0);
+            const canSubmit = canSend && !isGenerating && input.trim().length > 0;
 
             if (canSubmit) {
               submitForm();
@@ -670,13 +523,6 @@ function PureMultimodalInput({
         }}
       />
 
-      <div className="absolute bottom-0 left-0 p-2 w-fit flex flex-row justify-start z-10">
-        <AttachmentsButton
-          fileInputRef={fileInputRef}
-          disabled={isAttachmentDisabled}
-        />
-      </div>
-
       <div className="absolute bottom-0 right-0 p-2 w-fit flex flex-row justify-end z-10">
         {isGenerating ? (
           <StopButton onStop={onStopGenerating} />
@@ -684,8 +530,8 @@ function PureMultimodalInput({
           <SendButton
             submitForm={submitForm}
             input={input}
-            uploadQueue={uploadQueue}
-            attachments={attachments}
+            uploadQueue={[]}
+            attachments={[]}
             canSend={canSend}
             isGenerating={isGenerating}
           />
