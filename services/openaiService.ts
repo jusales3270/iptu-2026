@@ -232,6 +232,9 @@ Utilize estas estruturas para responder perguntas comuns:
 **4. "Isso vale para a construção também?"**
 "O Decreto 3.109 foca no Valor Venal do Terreno. Para construções (usado no cálculo do ISSQN da construção civil, por exemplo), utiliza-se o Decreto 3.107, que segue a tabela CUB/Sinduscon. Mas para o IPTU, o principal fator de atualização foi o terreno."
 
+**5. "Onde devo ir para tirar dúvidas, reclamar ou pedir revisão?"**
+"Os atendimentos para esclarecimentos de dúvidas, reclamações e até mesmo solicitação de revisão está sendo realizado presencialmente no Simplifica Centro - Rua Cel. Eugênio Motta - 985, de segunda a sexta-feira das 8h30 às 17h."
+
 ### FAQ: Isenção de IPTU e Mudanças 2026 - Base de Conhecimento
 
 #### 1. Critérios de Elegibilidade para Isenção
